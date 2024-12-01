@@ -1,0 +1,91 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+@import "@ionic/angular/css/palettes/dark.system.css";
+
+:root {
+    --ion-font-family: 'Poppins', sans-serif;
+    --ion-background-color: #0d0b17;
+    --ion-button-background: #C373F2;
+  }
+  .custom-alert {
+    --background: #0d0b17;
+    
+    .alert-wrapper {
+      background: #0d0b17;
+      border-radius: 15px;
+    }
+    
+    .alert-head {
+      h2 {
+        color: white;
+        font-family: 'Poppins', sans-serif;
+      }
+    }
+    
+    .alert-input-group {
+      padding: 10px;
+      
+      .alert-input {
+        background: rgba(255, 255, 255, 0.05);
+        border: none;
+        color: white;
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 8px;
+        
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.5);
+        }
+      }
+    }
+    
+    .alert-button-group {
+      padding: 10px;
+      
+      button {
+        color: #C373F2;
+        font-family: 'Poppins', sans-serif;
+        
+        &.confirm-button {
+          background: #C373F2;
+          color: white;
+          border-radius: 8px;
+        }
+      }
+    }
+  }
+  

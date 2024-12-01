@@ -1,0 +1,62 @@
+<ion-content class="ion-padding">
+  <div class="note-container">
+    <div class="note-header">
+      <ion-buttons>
+        <ion-back-button defaultHref="/home"></ion-back-button>
+      </ion-buttons>
+      
+      <ion-input
+        *ngIf="isEditing"
+        [(ngModel)]="note.title"
+        placeholder="Digite o título"
+        class="note-title">
+      </ion-input>
+      <h1 *ngIf="!isEditing" class="note-title">{{ note.title || 'Sem título' }}</h1>
+    </div>
+
+    <ion-textarea
+      *ngIf="isEditing"
+      [(ngModel)]="note.content"
+      placeholder="Digite o conteúdo da sua nota aqui..."
+      rows="12"
+      class="note-content">
+    </ion-textarea>
+    
+    <div *ngIf="!isEditing" class="note-content">
+      {{ note.content || 'Nota sem conteúdo' }}
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-row class="ion-justify-content-between ion-align-items-center">
+      <ion-col size="4" class="ion-text-center">
+        <ion-button fill="clear" (click)="toggleEdit()" class="footer-button">
+          <div class="button-content">
+            <ion-icon [name]="isEditing ? 'save-outline' : 'create-outline'"></ion-icon>
+            <span>{{ isEditing ? 'Salvar' : 'Editar' }}</span>
+          </div>
+        </ion-button>
+      </ion-col>
+      
+      <ion-col size="4" class="ion-text-center">
+        <ion-button fill="clear" (click)="deleteNote()" class="footer-button">
+          <div class="button-content">
+            <ion-icon name="trash-outline"></ion-icon>
+            <span>Apagar</span>
+          </div>
+        </ion-button>
+      </ion-col>
+      
+      <ion-col size="4" class="ion-text-center">
+        <ion-button fill="clear" (click)="openProfile()" class="footer-button">
+          <div class="button-content">
+            <ion-icon name="person-outline"></ion-icon>
+            <span>Perfil</span>
+          </div>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>

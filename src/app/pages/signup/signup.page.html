@@ -1,0 +1,30 @@
+<ion-content>
+  <div class="container">
+    <div class="form-box">
+      <h1>Criar Conta</h1>
+      <form (ngSubmit)="signup()">
+        <ion-item>
+          <ion-label position="floating">E-mail</ion-label>
+          <ion-input type="email" [(ngModel)]="credentials.email" name="email" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Senha</ion-label>
+          <ion-input type="password" [(ngModel)]="credentials.password" name="password" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Confirmar Senha</ion-label>
+          <ion-input type="password" [(ngModel)]="credentials.confirmPassword" name="confirmPassword" required></ion-input>
+        </ion-item>
+
+        <div class="error-message" *ngIf="errorMessage">
+          {{ errorMessage }}
+        </div>
+
+        <ion-button expand="block" type="submit">Criar Conta</ion-button>
+        <ion-button expand="block" fill="clear" (click)="goToLogin()" id="text_btn">Voltar para Login</ion-button>
+      </form>
+    </div>
+  </div>
+</ion-content>

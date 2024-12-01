@@ -1,0 +1,138 @@
+:host {
+  --ion-background-color: #0d0b17;
+  font-family: 'Poppins', sans-serif;
+}
+
+.page-title {
+  color: white;
+  font-size: 24px;
+  margin: 20px 0;
+  font-weight: 600;
+  text-align: center;
+}
+
+ion-list {
+  background: transparent;
+}
+
+.note-item {
+  --background: rgba(255, 255, 255, 0.05);
+  --border-radius: 10px;
+  margin-bottom: 10px;
+  
+  ion-label {
+    color: white;
+  }
+}
+
+ion-checkbox {
+  --checkbox-background-checked: #C373F2;
+  --checkbox-border-color-checked: #C373F2;
+  --border-color: #C373F2;
+}
+
+ion-fab-button {
+  --background: #C373F2;
+  --color: #0d0b17;
+}
+
+.profile-menu {
+  --background: #0d0b17;
+  
+  .menu-header {
+    padding: 20px;
+    background: #2b0450;
+    
+    h2 {
+      color: white;
+      margin: 0;
+      font-weight: 600;
+    }
+    
+    .user-email {
+      color: rgba(255, 255, 255, 0.8);
+      margin: 5px 0 0;
+    }
+  }
+  
+  ion-item {
+    --background: transparent;
+    --color: white;
+  }
+}
+
+ion-footer {
+  ion-toolbar {
+    --background: #080710;
+    
+    ion-button {
+      --background: transparent !important;
+      --box-shadow: none;
+      
+      .button-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        ion-icon {
+          font-size: 24px;
+          margin-bottom: 4px;
+          color: #C373F2;
+        }
+        
+        span {
+          font-size: 12px;
+          color: #C373F2;
+        }
+      }
+    }
+  }
+}
+
+.custom-alert {
+  --background: #0d0b17;
+  
+  .alert-wrapper {
+    background: #0d0b17;
+    border-radius: 15px;
+  }
+  
+  .alert-head {
+    h2 {
+      color: white;
+      font-family: 'Poppins', sans-serif;
+    }
+  }
+  
+  .alert-input-group {
+    padding: 10px;
+    
+    .alert-input {
+      background: rgba(255, 255, 255, 0.05);
+      border: none;
+      color: white;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 8px;
+      
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+  
+  .alert-button-group {
+    padding: 10px;
+    
+    button {
+      color: #C373F2;
+      font-family: 'Poppins', sans-serif;
+      
+      &.confirm-button {
+        background: #C373F2;
+        color: white;
+        border-radius: 8px;
+      }
+    }
+  }
+}

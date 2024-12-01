@@ -1,0 +1,26 @@
+<ion-content>
+  <div class="container">
+    <div class="form-box">
+      <h1>Login</h1>
+      <form (ngSubmit)="login()">
+        <ion-item>
+          <ion-label position="floating">E-mail</ion-label>
+          <ion-input type="email" [(ngModel)]="credentials.email" name="email" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Senha</ion-label>
+          <ion-input type="password" [(ngModel)]="credentials.password" name="password" required></ion-input>
+        </ion-item>
+
+        <div class="error-message" *ngIf="errorMessage">
+          {{ errorMessage }}
+        </div>
+
+        <ion-button expand="block" type="submit">Entrar</ion-button>
+        <ion-button expand="block" fill="clear" (click)="goToSignup()" id="text_btn">Criar nova conta</ion-button>
+        <ion-button expand="block" fill="clear" id="text_btn">Esqueci a senha</ion-button>
+      </form>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,41 @@
+// For information on how to create your own theme, please see:
+// http://ionicframework.com/docs/theming/
+
+:root {
+    .custom-alert {
+      .alert-wrapper {
+        --background: #0d0b17;
+        background: #0d0b17;
+        
+        .alert-head {
+          background: #0d0b17;
+          h2 {
+            color: white;
+          }
+        }
+        
+        .alert-input-group {
+          background: #0d0b17;
+          .alert-input {
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 5px 0;
+          }
+        }
+        
+        .alert-button-group {
+          background: #0d0b17;
+          button.primary-button {
+            color: white;
+            background: #C373F2;
+          }
+          button.secondary-button {
+            color: #C373F2;
+          }
+        }
+      }
+    }
+  }
+  
